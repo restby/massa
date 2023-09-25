@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-dw" viewBox="0 0 22 11"><g fill="none">
 <path d="M21 1L11 10L1 1" stroke="#316DC2"/>
 </g></symbol><symbol id="icon-arrow-tr" viewBox="0 0 22 22"><g fill="none">
-<path id="Vector 21" d="M1 21L21 1M21 1H1.13245M21 1V20.8676" stroke="#316DC2"/>
+<path id="Vector 21" d="M1 21L21 1M21 1H1.13245M21 1V20.8676" stroke="currentColor"/>
+</g></symbol><symbol id="icon-arrow" viewBox="0 0 10 10"><g fill="none">
+<path id="Vector 21" d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="currentColor"/>
 </g></symbol><symbol id="icon-check" viewBox="0 0 22 20"><g fill="none">
 <path id="Vector 28" d="M1 8.5L8.36842 19L21 1" stroke="#316DC2" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none">

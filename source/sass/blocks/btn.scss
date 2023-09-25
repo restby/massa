@@ -1,26 +1,78 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
-  // background-color: $color-neon-blue;
-  border: none;
+  align-items: center;
+  min-height: 54px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 30px;
+  padding-right: 4px;
+  border-radius: 30px;
+  border: 1px solid $btn-dark;
+  background-color: $btn-light;
+  color: $text-additional;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
   cursor: pointer;
+  transition: background-color $trans-default, color $trans-default;
 
-  transition: opacity $trans-default;
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
 
-  &--red {
-    // background-color: $color-torch-red;
+  & span {
+    margin-left: 30px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: $btn-dark;
+    color: $text-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &:disabled {
-    opacity: 0.5;
-
+    color: $btn-disabled;
     pointer-events: none;
+
+    & span {
+      background-color: $btn-disabled;
+      color: rgba($text-light, 0.6);
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    color: $btn-disabled;
+    border-color: $btn-disabled;
+
+    & span {
+      background-color: $btn-disabled;
+      color: rgba($text-light, 0.6);
+    }
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    background-color: $btn-dark;
+    color: $text-light;
+
+    & span {
+      background-color: $btn-light;
+      color: $text-additional;
+      transition: background-color $trans-default, color $trans-default;
+    }
+
+    @include active {
+      color: rgba($text-light, 0.7);
+
+      & span {
+        color: rgba($text-additional, 0.7);
+      }
+    }
   }
 }
