@@ -2,23 +2,33 @@
 
 .programs__container {}
 
-.programs__top-row {}
+.programs__top-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
 
-.programs__link {}
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+
+  & h2 {
+    color: $text-additional;
+  }
+}
+
+.programs__link {
+  max-width: 232px;
+
+  @include vp-767 {
+    max-width: 203px;
+  }
+}
 
 .programs__slider {}
 
 .programs__wrapper {}
 
 .programs__slide {}
-
-.programs-slide {}
-
-.programs-slide__content {}
-
-.programs-slide__head {}
-
-.programs-slide__row {}
 
 .programs__btns {}
 

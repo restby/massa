@@ -1,0 +1,145 @@
+.programs-slide {
+  height: auto;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+
+  /**/
+  width: 392px;
+  /**/
+
+  & picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  & img {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-position: bottom;
+    object-fit: cover;
+  }
+}
+
+.programs-slide__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 51px;
+  padding-bottom: 20px;
+  z-index: 2;
+  position: relative;
+
+  @include vp-1199 {}
+
+  @include vp-767 {}
+}
+
+.programs-slide__head {
+  width: 100%;
+  max-width: 194px;
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 6px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 12px 12px 0 0;
+  background-color: $color-default-white;
+
+  & h4 {
+    color: $text-additional;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: -18px;
+    bottom: -2px;
+    width: 18px;
+    height: 18px;
+    background-color: $color-transparent;
+    background-repeat: no-repeat;
+    background-image: url("../../img/svg/angle.svg");
+  }
+}
+
+.programs-slide__body {
+  padding-top: 12px;
+  padding-bottom: 15px;
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: $color-default-white;
+  border-radius: 0 12px 12px 12px;
+  display: flex;
+  justify-content: space-between;
+
+  & p {
+    margin: 0;
+    color: $text-dark;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    @include vp-1199 {
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.programs-slide__link {
+  flex-shrink: 0;
+  margin-left: 16px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $btn-dark;
+  color: $text-light;
+  cursor: pointer;
+  transition: background-color $trans-default, color $trans-default, transform $trans-default;
+
+  &:disabled {
+    color: $btn-disabled;
+    background-color: $btn-disabled;
+    pointer-events: none;
+  }
+
+  &--disabled {
+    color: $btn-disabled;
+    background-color: $btn-disabled;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    outline: none;
+    background-color: $btn-light;
+    color: $text-additional;
+
+    & svg {
+      transform: rotate(45deg);
+    }
+
+    @include active {
+      color: rgba($text-additional, 0.7);
+
+      & svg {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
