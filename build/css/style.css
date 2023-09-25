@@ -572,8 +572,10 @@ button,
   letter-spacing: 0.28px;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease, -webkit-transform 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, -webkit-transform 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 @media (max-width: 767px) {
   .btn {
@@ -583,7 +585,7 @@ button,
   }
 }
 .btn span {
-  margin-left: 30px;
+  margin-left: auto;
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -624,14 +626,24 @@ button,
   .btn:hover:not(.focus-visible) span {
     background-color: #ffffff;
     color: #316dc2;
-    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  .btn:hover:not(.focus-visible) svg {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
   .btn:hover:not(.focus-visible):active {
     color: rgba(255, 255, 255, 0.7);
   }
   .btn:hover:not(.focus-visible):active span {
     color: rgba(49, 109, 194, 0.7);
+  }
+  .btn:hover:not(.focus-visible):active svg {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
   }
 }
 .btn.focus-visible:focus {
@@ -641,14 +653,24 @@ button,
 .btn.focus-visible:focus span {
   background-color: #ffffff;
   color: #316dc2;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.btn.focus-visible:focus svg {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .btn.focus-visible:focus:active {
   color: rgba(255, 255, 255, 0.7);
 }
 .btn.focus-visible:focus:active span {
   color: rgba(49, 109, 194, 0.7);
+}
+.btn.focus-visible:focus:active svg {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 section h2 {
@@ -825,6 +847,16 @@ section h3 {
   .about__descr p {
     font-size: 14px;
     margin-bottom: 30px;
+  }
+}
+
+.about_link {
+  width: 100%;
+  max-width: 277px;
+}
+@media (max-width: 767px) {
+  .about_link {
+    max-width: 221px;
   }
 }
 

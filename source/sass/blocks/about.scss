@@ -118,8 +118,14 @@
   }
 }
 
+.about_link {
+  width: 100%;
+  max-width: 277px;
 
-.about_link {}
+  @include vp-767 {
+    max-width: 221px;
+  }
+}
 
 .about__info {
   padding: 70px;

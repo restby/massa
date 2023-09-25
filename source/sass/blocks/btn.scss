@@ -16,7 +16,7 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color $trans-default, color $trans-default;
+  transition: background-color $trans-default, color $trans-default, transform $trans-default;
 
   @include vp-767 {
     font-size: 12px;
@@ -25,7 +25,7 @@
   }
 
   & span {
-    margin-left: 30px;
+    margin-left: auto;
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -67,11 +67,19 @@
       transition: background-color $trans-default, color $trans-default;
     }
 
+    & svg {
+      transform: rotate(45deg);
+    }
+
     @include active {
       color: rgba($text-light, 0.7);
 
       & span {
         color: rgba($text-additional, 0.7);
+      }
+
+      & svg {
+        transform: rotate(45deg);
       }
     }
   }
