@@ -1443,6 +1443,101 @@ section h4 {
   text-transform: uppercase;
 }
 
+.social {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.social ul {
+  max-width: 148px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+}
+@media (max-width: 767px) {
+  .social ul {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+.social a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background-color: #316dc2;
+  color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: background-color 0.4s ease, color 0.4s ease, -webkit-transform 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, -webkit-transform 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+.social a:disabled {
+  color: #a9afb7;
+  background-color: #a9afb7;
+  pointer-events: none;
+}
+.social a--disabled {
+  color: #a9afb7;
+  background-color: #a9afb7;
+  pointer-events: none;
+}
+@media (max-width: 767px) {
+  .social a {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (hover: hover) {
+  .social a:hover:not(.focus-visible) {
+    outline: none;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .social a:hover:not(.focus-visible):active {
+    background-color: #275699;
+    color: #ffffff;
+  }
+}
+.social a.focus-visible:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+.social a.focus-visible:focus:active {
+  background-color: #275699;
+  color: #ffffff;
+}
+.social svg {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 767px) {
+  .social svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
