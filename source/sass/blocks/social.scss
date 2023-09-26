@@ -1,7 +1,6 @@
 .social {
-  flex-shrink: 0;
-
   & ul {
+    width: 100%;
     max-width: 148px;
     margin: 0;
     padding: 0;
@@ -28,7 +27,7 @@
     color: $text-light;
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color $trans-default, color $trans-default, transform $trans-default;
+    transition: background-color $trans-default, color $trans-default;
 
     &:disabled {
       color: $btn-disabled;

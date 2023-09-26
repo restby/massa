@@ -1,0 +1,25 @@
+.logo {
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    transition: opacity $trans-default;
+    background-color: $color-default-white;
+  }
+
+  &--header a {}
+
+  &--footer a {
+    @include hover-focus {
+      outline: none;
+      opacity: 0.8;
+
+      @include active {
+        opacity: 0.6;
+      }
+    }
+  }
+}
