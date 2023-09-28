@@ -1,0 +1,19 @@
+.form {
+  & form {}
+
+  & button[type="submit"] {}
+}
+
+.form__container {}
+
+.form__field {
+  &--name {}
+
+  &--phone {}
+
+  &--message {}
+
+  & label {}
+
+  & input {}
+}
